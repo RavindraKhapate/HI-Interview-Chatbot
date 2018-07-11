@@ -1,0 +1,1132 @@
+  <!DOCTYPE html>
+    <html lang="en-US" class="js">
+
+    <head>
+        <meta http-equiv="x-ua-compatible" content="IE=11">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="google-site-verification" content="wM0RMJdkVMKhDS7JZQR3_Q4E_Cf-WV27VGEqHJutSDo">
+        <meta name="msvalidate.01" content="552ACDE10D0D41BC570813AEBA841F94">
+        <meta name="google-site-verification" content="IUOCUepVW3cBSWiqOijJm6k_KGBsVRn5cE-asGhoYmw">
+        <meta name="google-site-verification" content="Nyth0q0d-Q_R3zGh29imqzO3gzssg5yL4aFiwgl8NeY">
+        <link rel="shortcut icon" href="../favicon.ico">
+        <link rel="stylesheet prefetch" href="https://hexaware.com/wp-content/themes/hexaware-main/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/animations.css">
+        <link rel="stylesheet" href="../css/bootstrap-responsive-tabs.css">
+        <link rel="stylesheet" href="../css/slick.css">
+        <link rel="stylesheet" href="../css/slick-theme.css">
+        <link rel="stylesheet" href="../css/jquery.fancybox.css">
+        <link rel="stylesheet" href="../css/easy-responsive-tabs.css">
+        <link rel="stylesheet" href="../css/owl.carousel.min.css">
+        <link rel="stylesheet" href="../css/owl.theme.css">
+		<link rel="stylesheet" href="../css/gray.min.css">
+        <link rel="stylesheet" href="../css/icon-animation.css">
+        
+
+        <!-- Google Tag Manager -->
+                <script>
+            (function(w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({
+                    'gtm.start': new Date().getTime(),
+                    event: 'gtm.js'
+                });
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s),
+                    dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-MZ6XMC');
+
+        </script>
+                <!-- End Google Tag Manager -->
+
+        <!--google analytics code-->
+                <script>
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function() {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+            ga('create', 'UA-1227333-1', 'auto');
+            ga('send', 'pageview');
+
+        </script>
+                <!--end google analytics code-->
+
+        <!--JavaScript Beacon:-->
+                <script type="text/javascript" src="../js/evergage.min.js" async></script>
+                <!-- end JavaScript Beacon:-->
+
+<!--        linked in code-->
+        <script type="text/javascript">
+            _linkedin_data_partner_id = "43251";
+            </script><script type="text/javascript">
+            (function(){var s = document.getElementsByTagName("script")[0];
+            var b = document.createElement("script");
+            b.type = "text/javascript";b.async = true;
+            b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+            s.parentNode.insertBefore(b, s);})();
+        </script>
+<noscript>
+<img height="1" width="1" style="display:none;" alt="" src="../collect">
+</noscript>
+        <!--        linked in code-->
+        
+        <link rel="dns-prefetch" href="//s.w.org">
+<link rel="stylesheet" id="hexaware-style-css" href="../css/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="bootstrap-select-css" href="../css/bootstrap-select.css" type="text/css" media="all">
+<link rel="stylesheet" id="hexaware-style17-css" href="../css/style17.css" type="text/css" media="all">
+<link rel="stylesheet" id="hexaware-responsive-style17-css" href="../css/responsive17.css" type="text/css" media="all">
+<!--[if lt IE 10]>
+<link rel='stylesheet' id='hexaware-ie-css'  href='https://hexaware.com/wp-content/themes/hexaware-main/css/ie.css?ver=20150930' type='text/css' media='all' />
+<![endif]-->
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		        <!--tab purpose-->
+        <link rel="stylesheet" href="../css/jquery-ui.min.css">
+                <script src="../js/jquery.min.js"></script>
+        <script src="../js/jquery-ui.min.js"></script>
+        <script src="../js/jquery-ui.js"></script>
+
+                <!--tab purpose ends here-->
+                <title>
+             - Hexaware        </title>
+
+                <script type="text/javascript">
+            console.log('1');
+            setTimeout(function(){equalheight('.box-job-new')},10000);
+            setTimeout(function(){equalheight('.walkin-inr-hdng');},7000);
+            setTimeout(function(){equalheight('.bg-text-press');},7000);
+            //equalheight('.box-job-new');
+            //equalheight('.walkin-inr-hdng');
+            console.log('2');
+
+            function equalheight(NewsContainer) {
+                var currentTallest = 0,
+                    currentRowStart = 0,
+                    rowDivs = new Array(),
+                    $el,
+                    topPosition = 0;
+                $(NewsContainer).each(function () {
+                    $el = $(this);
+                    $($el).height('auto')
+                    topPostion = $el.position().top;
+                      if (currentRowStart != topPostion) {
+                        for (currentDiv = 0; currentDiv < rowDivs.length; currentDiv++) {
+                            rowDivs[currentDiv].height(currentTallest);
+                        }
+                        rowDivs.length = 0; // empty the array
+                        currentRowStart = topPostion;
+                        currentTallest = $el.height();
+                        rowDivs.push($el);
+                    } else {
+                        rowDivs.push($el);
+                        currentTallest = (currentTallest < $el.height()) ? ($el.height()) : (currentTallest);
+                    }
+                    for (currentDiv = 0; currentDiv < rowDivs.length; currentDiv++) {
+                        rowDivs[currentDiv].height(currentTallest);
+                    }
+                });
+            }
+
+            $(window).load(function () {
+              console.log('3');
+                equalheight('.box-job-new');
+                equalheight('.walkin-inr-hdng');
+                equalheight('.bg-text-press');
+            });
+            $(window).resize(function () {
+              console.log('4');
+                equalheight('.box-job-new');
+                equalheight('.walkin-inr-hdng');
+                 equalheight('.bg-text-press');
+            });
+        </script>
+
+        <script>
+        $(document).ready(function(){
+
+          $('[name=privacyPolicyRadio]').change(function() {
+            if (this.value == 'agree') {
+                //window.location.href = 'http://marketing.hexaware.com/acton/fs/blocks/showLandingPage/a/18453/p/p-0061/t/page/fm/0';
+                window.open('http://marketing.hexaware.com/acton/fs/blocks/showLandingPage/a/18453/p/p-0061/t/page/fm/0', '_blank');
+            }
+            else if (this.value == 'notagree') {
+                //window.location.href = 'http://marketing.hexaware.com/acton/fs/blocks/showLandingPage/a/18453/p/p-0064/t/page/fm/0';
+                window.open('http://marketing.hexaware.com/acton/fs/blocks/showLandingPage/a/18453/p/p-0064/t/page/fm/0', '_blank');
+            }
+          });
+
+          if($(window).width() > 640) {
+            $('img.multi-image').each(function (index, element) {
+              var url = $(this).attr('data-web');
+              $(this).attr('src', url);
+            });
+          } else {
+            $('img.multi-image').each(function (index, element) {
+              var url = $(this).attr('data-mobile');
+              $(this).attr('src', url);
+            });
+          }
+        });
+      </script>
+
+        <script>
+            $(document).ready(function() {
+                if ($(window).width() > 640) {
+                    $('img.multi-image').each(function(index, element) {
+                        var url = $(this).attr('data-web');
+                        $(this).attr('src', url);
+                    });
+                } else {
+                    $('img.multi-image').each(function(index, element) {
+                        var url = $(this).attr('data-mobile');
+                        $(this).attr('src', url);
+                    });
+                }
+            });
+
+        </script>
+
+        <script>
+            $(document).ready(function() {
+                $('.search-button').click(function() {
+                    setTimeout(function() {
+                        $('input[name="s"]').focus()
+                    }, 1000);
+
+
+
+                });
+            });
+
+            function getResults() {
+                var temp = trimSpaces($('.search-input').val());
+                if (temp === '') {
+                    return false;
+                } else {
+                    $('.search-input').val(temp);
+                }
+            }
+
+            function trimSpaces(text) {
+                text = text.
+                replace(/(^\s*)|(\s*$)/gi, ""). // removes leading and trailing spaces
+                replace(/[ ]{2,}/gi, " "). // replaces multiple spaces with one space 
+                replace(/\n +/, "\n"); // Removes spaces after newlines
+                return text;
+            }
+
+        </script>
+      <!--    share-->
+    <script type="text/javascript">
+        var switchTo5x = true;
+    </script>
+    <script src="../js/buttons.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        stLight.options({
+            publisher: "79e4444d-d735-4840-8acb-65bd66b210a5",
+            hashAddressBar: false,
+            doNotHash: true,
+            doNotCopy: true,
+            onhover: false,
+            headerTitle: "Social Share"
+        });
+	</script>
+    <!--    share-->
+    </head>
+
+    <body class="error404 hfeed">
+                <noscript><iframe src="../ns.html" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+                <!-- End Google Tag Manager (noscript) -->
+                <script type="application/ld+json">
+            {
+                "@context": "http://schema.org",
+                "@type": "Organization",
+                "url": "https://hexaware.com",
+                "logo": "https://hexaware.com/wp-content/themes/hexaware-main/images/Brand/thumnail/color.jpg"
+            }
+
+        </script>
+                <div class="eupopup eupopup-top eupopup-style-compact"></div>
+        <!--Header-Starts-->
+        <div class="header17">
+            <header class="hx-header">
+                <div class="flip-hdr-box">
+                    <div class="header-front">
+                        <nav class="navbar" role="navigation">
+                            <div class="container">
+
+                                <div class="navbar-header">
+                                    <a class="navbar-brand" href="https://hexaware.com">
+            <img src="../images/logo.png" alt="">
+          </a>
+                                </div>
+
+
+                                <div class="mbl-menu pull-right">
+                                    <i class=""></i>
+                                    <i class=""></i>
+                                    <i class=""></i>
+                                </div>
+                                <div class="searchbox-menu" style="float:right">
+                                    <img class="search-button" data-toggle="modal" data-target="#searchModal" src="../images/search-new.png">
+
+                                </div>
+
+                                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+
+                                    <ul id="menu-main-menu" class="nav navbar-menu"><li id="menu-item-7" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-7 dropdown"><a title="SERVICES" href="#" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">SERVICES <span class="caret"></span></a>
+<ul role="menu" class=" dropdown-menu">
+	<li id="menu-item-918" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-918"><a title="Application Transformation Management" href="https://hexaware.com/services/application-transformation-management/">Application Transformation Management</a></li>
+	<li id="menu-item-13806" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13806"><a title="Application Support &#038; Maintenance" href="https://hexaware.com/services/application-support-maintenance/">Application Support &#038; Maintenance</a></li>
+	<li id="menu-item-914" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-914"><a title="Business Intelligence and Analytics" href="https://hexaware.com/services/business-intelligence-and-analytics/">Business Intelligence and Analytics</a></li>
+	<li id="menu-item-916" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-916"><a title="Business Process Services" href="https://hexaware.com/services/business-process-services/">Business Process Services</a></li>
+	<li id="menu-item-792" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-792"><a title="Digital Assurance" href="https://hexaware.com/services/digital-assurance/">Digital Assurance</a></li>
+	<li id="menu-item-915" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-915"><a title="Digital Customer" href="https://hexaware.com/services/digital-customer/">Digital Customer</a></li>
+	<li id="menu-item-793" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-793"><a title="Enterprise Solutions" href="https://hexaware.com/services/enterprise-solutions/">Enterprise Solutions</a></li>
+	<li id="menu-item-917" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-917"><a title="Infrastructure Management Services" href="https://hexaware.com/services/infrastructure-management-services/">Infrastructure Management Services</a></li>
+	<li id="menu-item-11504" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11504"><a title="Customer Experience Transformation" href="https://hexaware.com/services/call-center-transformation/">Customer Experience Transformation</a></li>
+</ul>
+</li>
+<li id="menu-item-8" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-8 dropdown"><a title="INDUSTRIES" href="#" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">INDUSTRIES <span class="caret"></span></a>
+<ul role="menu" class=" dropdown-menu">
+	<li id="menu-item-117" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-117"><a title="Banking and Financial Services" href="https://hexaware.com/industries/banking-and-financial-services/">Banking and Financial Services</a></li>
+	<li id="menu-item-118" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-118"><a title="Travel and Transportation" href="https://hexaware.com/industries/travel-and-transportation/">Travel and Transportation</a></li>
+	<li id="menu-item-6984" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6984"><a title="Healthcare and Insurance" href="https://hexaware.com/industries/healthcare-and-insurance/">Healthcare and Insurance</a></li>
+	<li id="menu-item-120" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-120"><a title="Manufacturing and Consumer" href="https://hexaware.com/industries/manufacturing-and-consumer/">Manufacturing and Consumer</a></li>
+	<li id="menu-item-11838" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11838"><a title="Professional Services" href="https://hexaware.com/industries/professional-services/">Professional Services</a></li>
+</ul>
+</li>
+<li id="menu-item-9" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-9 dropdown"><a title="CORPORATE OVERVIEW" href="#" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">CORPORATE OVERVIEW <span class="caret"></span></a>
+<ul role="menu" class=" dropdown-menu">
+	<li id="menu-item-8654" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8654"><a title="About Hexaware" href="https://hexaware.com/corporate-overview/about-hexaware/">About Hexaware</a></li>
+	<li id="menu-item-1198" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1198"><a title="Core Values" href="https://hexaware.com/corporate-overview/core-values/">Core Values</a></li>
+	<li id="menu-item-7951" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7951"><a title="Board of Directors" href="https://hexaware.com/corporate-overview/board-of-directors/">Board of Directors</a></li>
+	<li id="menu-item-1233" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1233"><a title="Management Team" href="https://hexaware.com/corporate-overview/management-team/">Management Team</a></li>
+	<li id="menu-item-1876" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1876"><a title="Milestones" href="https://hexaware.com/corporate-overview/milestones/">Milestones</a></li>
+	<li id="menu-item-1199" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1199"><a title="Hexaware Edge" href="https://hexaware.com/corporate-overview/hexaware-edge/">Hexaware Edge</a></li>
+	<li id="menu-item-1902" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1902"><a title="Quality Policy" href="https://hexaware.com/corporate-overview/quality-policy/">Quality Policy</a></li>
+	<li id="menu-item-1196" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1196"><a title="Alliances" href="https://hexaware.com/corporate-overview/alliances/">Alliances</a></li>
+	<li id="menu-item-1197" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1197"><a title="Awards and Recognition" href="https://hexaware.com/corporate-overview/awards-and-recognition/">Awards and Recognition</a></li>
+	<li id="menu-item-7540" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7540"><a title="HexaVarsity" href="https://hexaware.com/corporate-overview/hexavarsity/">HexaVarsity</a></li>
+	<li id="menu-item-9207" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9207"><a title="Analyst Speak" href="https://hexaware.com/corporate-overview/analyst-speak/">Analyst Speak</a></li>
+	<li id="menu-item-11414" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11414"><a title="Brand Resource" href="/brand">Brand Resource</a></li>
+</ul>
+</li>
+<li id="menu-item-10" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10"><a title="RESOURCE CENTER" href="/resources/">RESOURCE CENTER</a></li>
+<li id="menu-item-5650" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5650"><a title="CAREERS" href="https://hexaware.com/careers/">CAREERS</a></li>
+</ul>
+                                        <ul class="nav navbar-nav navbar-right web-menu-hide">
+                                            <li class="dropdown"> <a data-toggle="dropdown" class="dropdown-toggle" href="javascript:void(0)">Sub Menu</a>
+                                                <ul role="menu" class="dropdown-menu">
+                                                    <li><a href="/investors/">Investors</a></li>
+                                                    <li><a href="/news/">News &amp; Events</a></li>
+                                                    <li><a href="http://blogs.hexaware.com/">Blogs</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+
+                                        <ul class="nav navbar-nav navbar-right web-menu-hide hx-app">
+                                            <li>
+                                                <a href="/download-app/" target="_blank" class="mbl-app">
+                <img src="../images/mobile-icon.png" class="" alt="">
+                <p>Download App</p>
+              </a>
+                                            </li>
+                                        </ul>
+
+                                        <ul class="BUD-icon">
+                                            <li>
+                                                <a href="/bottom-up-disruption/" target="_blank" class="app">
+                <img src="../images/BUD-icon.png" class="bud-mbl-icon" alt="">
+              </a>
+                                            </li>
+                                        </ul>
+
+                                        <ul class="social-mbl-icons">
+                                            <a href="https://www.linkedin.com/company/hexaware-technologies" target="_blank" class="linkedin">
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+                                            <a href="https://www.facebook.com/HexawareTechnologies" target="_blank" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                            <a href="https://twitter.com/hexawareglobal" target="_blank" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                        </ul>
+
+                                </div>
+
+
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="header-bottom">
+                        <nav class="navbar" role="navigation">
+                            <div class="container">
+
+                                <div class="navbar-header">
+                                    <a class="navbar-brand" href="/">
+            <img src="../images/logo-icon.png" alt="">
+          </a>
+                                </div>
+
+
+                                <div class="mbl-menu black-menu pull-right">
+                                    <i class=""></i>
+                                    <i class=""></i>
+                                    <i class=""></i>
+                                </div>
+                                <div class="searchbox-menu" style="float:right">
+                                    <img class="search-button" style="margin-top:24px" data-toggle="modal" data-target="#searchModal" src="../images/search-new.png">
+
+                                </div>
+                                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+                                    <ul id="menu-main-menu-1" class="nav navbar-menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-7 dropdown"><a title="SERVICES" href="#" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">SERVICES <span class="caret"></span></a>
+<ul role="menu" class=" dropdown-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-918"><a title="Application Transformation Management" href="https://hexaware.com/services/application-transformation-management/">Application Transformation Management</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13806"><a title="Application Support &#038; Maintenance" href="https://hexaware.com/services/application-support-maintenance/">Application Support &#038; Maintenance</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-914"><a title="Business Intelligence and Analytics" href="https://hexaware.com/services/business-intelligence-and-analytics/">Business Intelligence and Analytics</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-916"><a title="Business Process Services" href="https://hexaware.com/services/business-process-services/">Business Process Services</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-792"><a title="Digital Assurance" href="https://hexaware.com/services/digital-assurance/">Digital Assurance</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-915"><a title="Digital Customer" href="https://hexaware.com/services/digital-customer/">Digital Customer</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-793"><a title="Enterprise Solutions" href="https://hexaware.com/services/enterprise-solutions/">Enterprise Solutions</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-917"><a title="Infrastructure Management Services" href="https://hexaware.com/services/infrastructure-management-services/">Infrastructure Management Services</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11504"><a title="Customer Experience Transformation" href="https://hexaware.com/services/call-center-transformation/">Customer Experience Transformation</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-8 dropdown"><a title="INDUSTRIES" href="#" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">INDUSTRIES <span class="caret"></span></a>
+<ul role="menu" class=" dropdown-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-117"><a title="Banking and Financial Services" href="https://hexaware.com/industries/banking-and-financial-services/">Banking and Financial Services</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-118"><a title="Travel and Transportation" href="https://hexaware.com/industries/travel-and-transportation/">Travel and Transportation</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6984"><a title="Healthcare and Insurance" href="https://hexaware.com/industries/healthcare-and-insurance/">Healthcare and Insurance</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-120"><a title="Manufacturing and Consumer" href="https://hexaware.com/industries/manufacturing-and-consumer/">Manufacturing and Consumer</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11838"><a title="Professional Services" href="https://hexaware.com/industries/professional-services/">Professional Services</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-9 dropdown"><a title="CORPORATE OVERVIEW" href="#" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">CORPORATE OVERVIEW <span class="caret"></span></a>
+<ul role="menu" class=" dropdown-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8654"><a title="About Hexaware" href="https://hexaware.com/corporate-overview/about-hexaware/">About Hexaware</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1198"><a title="Core Values" href="https://hexaware.com/corporate-overview/core-values/">Core Values</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7951"><a title="Board of Directors" href="https://hexaware.com/corporate-overview/board-of-directors/">Board of Directors</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1233"><a title="Management Team" href="https://hexaware.com/corporate-overview/management-team/">Management Team</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1876"><a title="Milestones" href="https://hexaware.com/corporate-overview/milestones/">Milestones</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1199"><a title="Hexaware Edge" href="https://hexaware.com/corporate-overview/hexaware-edge/">Hexaware Edge</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1902"><a title="Quality Policy" href="https://hexaware.com/corporate-overview/quality-policy/">Quality Policy</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1196"><a title="Alliances" href="https://hexaware.com/corporate-overview/alliances/">Alliances</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1197"><a title="Awards and Recognition" href="https://hexaware.com/corporate-overview/awards-and-recognition/">Awards and Recognition</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7540"><a title="HexaVarsity" href="https://hexaware.com/corporate-overview/hexavarsity/">HexaVarsity</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9207"><a title="Analyst Speak" href="https://hexaware.com/corporate-overview/analyst-speak/">Analyst Speak</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11414"><a title="Brand Resource" href="/brand">Brand Resource</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10"><a title="RESOURCE CENTER" href="/resources/">RESOURCE CENTER</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5650"><a title="CAREERS" href="https://hexaware.com/careers/">CAREERS</a></li>
+</ul>
+                                        <ul class="nav navbar-nav navbar-right web-menu-hide">
+                                            <li class="dropdown"> <a data-toggle="dropdown" class="dropdown-toggle" href="javascript:void(0)">Sub Menu</a>
+                                                <ul role="menu" class="dropdown-menu">
+                                                    <li><a href="/investors/">Investors</a></li>
+                                                    <li><a href="/news/">News &amp; Events</a></li>
+                                                    <li><a href="http://blogs.hexaware.com">Blogs</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+
+                                        <ul class="nav navbar-nav navbar-right web-menu-hide hx-app">
+                                            <li>
+                                                <a href="/download-app/" target="_blank" class="mbl-app">
+                <img src="../images/mobile-icon.png" class="" alt="">
+                <p>Download App</p>
+              </a>
+                                            </li>
+                                        </ul>
+
+                                        <ul class="social-mbl-icons">
+                                            <a href="https://www.linkedin.com/company/hexaware-technologies" target="_blank" class="linkedin">
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+                                            <a href="https://www.facebook.com/HexawareTechnologies" target="_blank" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                            <a href="https://twitter.com/hexawareglobal" target="_blank" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                        </ul>
+
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="hx-fxd-mnu">
+
+                        <ul id="menu-top-menu" class="">
+                            <li id="menu-item-2082" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-2082"><a title="Home" href="https://hexaware.com/">Home</a></li>
+                            <li id="menu-item-2084" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2084"><a title="Investors" href="/investors/">Investors</a></li>
+                            <li id="menu-item-2086" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2086"><a title="News &amp; Events" href="/news/">News &amp; Events</a></li>
+                            <li id="menu-item-6301" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6301"><a title="Blogs" href="http://blogs.hexaware.com">Blogs</a></li>
+                        </ul>
+
+                        <ul class="app-link">
+                            <li>
+                                <a href="/download-app/" target="_blank" class="app">
+                <img src="../images/mobile-icon.png" class="app-icon" alt="">
+                <p>Download App</p>
+              </a>
+                            </li>
+                        </ul>
+
+                        <ul class="BUD-icon">
+                            <li>
+                                <a href="/bottom-up-disruption/" target="_blank" class="app">
+                <img src="../images/BUD-icon.png" class="bud-icon" alt="">
+              </a>
+                            </li>
+                        </ul>
+
+                        <ul class="social-icons">
+                            <a href="https://www.linkedin.com/company/hexaware-technologies" target="_blank" class="linkedin">
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+                            <a href="https://www.facebook.com/HexawareTechnologies" target="_blank" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <a href="https://twitter.com/hexawareglobal" target="_blank" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        </ul>
+
+                        <div class="morph-shape" id="morph-shape" data-morph-open="M61.6,799.7H0.3c0,0-0.3-171.7-0.3-403C0,154.3,0.3,0.2,0.3,0.2h61.2V799.7z">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 62 800" preserveaspectratio="none" fill="none">
+            <path d="M61.6,799.7H0.3c0,0,59.3-172.3,59.3-403.6C59.6,153.7,0.3,0.2,0.3,0.2h61.2V799.7z"/>
+          </svg>
+                        </div>
+
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="modal fade" id="searchModal" role="dialog" style="top:30%;top: 0px;display: none; background: rgba(0, 0, 0, 0.7);z-index: 99999;">
+            <div class="modal-dialog modal-lg" style="margin-top: 80px;">
+                <div class="modal-content search-cotent">
+                    <div class="modal-body search-body">
+                        <button type="button" class="search-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                        <form action="https://hexaware.com/" style="margin-top: 40px;" onsubmit="return getResults()">
+                            <input id="search-in" class="search-input" name="s" type="text" required placeholder="search" autocomplete="off">
+                            <input id="search_submit" value="" type="submit">
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+
+    <!-- Optin popup form -->
+    <!-- <div class="modal fade privacy-pop" id="myModal" role="dialog" style="z-index: 0;">
+    <div class="modal-dialog">
+    
+      <div class="modal-content">
+        <div class="modal-header"> 
+            <button class="close popup-close-btn" id="privacy-close-btn">×</button>
+        </div>
+        <div class="modal-body">
+          <h2>Opt-in Confirmation</h2>
+          <p>Thank you for registering to Hexaware Communications. Please confirm your E-mail address below for future correspondence.</p>
+          <br/>
+          <form method="POST" onsubmit="return false">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email Address</label>
+                <input type="text" class="form-control" id="pvcy-email" placeholder="Enter Email Address*">
+            </div>
+            <div class="submit-contact submit-contact-page">
+                  <button type="submit" name="Submit" class="btn btn-primary career-btn" id="pvcy-btn" data-id="" style="border-radius: 30px;">Submit</button>
+            </div>
+        </form>
+        </div>
+      </div>
+      
+    </div>
+  </div> -->
+
+
+
+<div class="container subpage-banner" id="subpage">
+	<div class="container subpage-content errorpage" id="subpage-contentarea">
+
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+        
+        
+
+			<section class="error-404 not-found">
+				<header class="page-header" style="border-bottom:none;">
+					<h1 class="page-title">Sorry, We couldn't find the page<br> you were looking for</h1>
+				</header><!-- .page-header -->
+                
+                <p>Check the URL or head back to the <a href="http://hexaware.com/">home</a> page</p>
+                
+                <p>If you continue to get this page, <br>Report a broken link or mail Us at <a href="mailto:marketing@hexaware.com">marketing@hexaware.com</a></p>
+
+				<div class="page-content">
+					<p>If there’s anything we can help you find</p>
+
+					
+<div class="error-search">
+<form role="search" method="get" class="search-form" action="https://hexaware.com/">
+	<label>		
+		<input type="search" class="search-field" autocomplete="off" placeholder="Search &hellip;" value="" name="s" title="Search for:">
+	</label>
+	<button type="submit" class="search-submit"><span class="screen-reader-text"><img src="../images/search_box_icon.png"></span></button>   
+</form>
+</div>
+
+				</div><!-- .page-content -->
+                
+                <p class="error-txt">Try one of these links or use search above..</p>
+				<ul class="pagelinks">
+                	<li><a href="https://hexaware.com/corporate-overview/about-hexaware/">About Us</a></li>
+                    <li><a href="https://hexaware.com/services/application-transformation-management/">Services</a></li>
+                    <li><a href="https://hexaware.com/industries/banking-and-financial-services/">Industries</a></li>
+                    <li><a href="https://hexaware.com/careers/">Careers</a></li>
+                </ul>                    
+				
+                
+			</section><!-- .error-404 -->
+
+		</main><!-- .site-main -->
+
+		
+	</div><!-- .content-area -->
+    </div>
+</div>
+
+<a class="floating-contact" href="/contact-us/">
+	<img src="../images/contact-us-icon.png" alt="">
+	<span>Contact Us</span>
+</a>
+<div class="footer new-style-footer">
+<div class="hexaware16">
+	<div class="footer-links">
+		<div class="container foot-links">
+			<ul id="menu-footer-menu" class="footer-menu"><li id="menu-item-1142" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1142"><a>Services</a>
+<ul class="sub-menu">
+	<li id="menu-item-1145" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1145"><a href="https://hexaware.com/services/application-transformation-management/">Application Transformation Management</a></li>
+	<li id="menu-item-13805" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13805"><a href="https://hexaware.com/services/application-support-maintenance/">Application Support &#038; Maintenance</a></li>
+	<li id="menu-item-1146" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1146"><a href="https://hexaware.com/services/business-intelligence-and-analytics/">Business Intelligence and Analytics</a></li>
+	<li id="menu-item-1147" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1147"><a href="https://hexaware.com/services/business-process-services/">Business Process Services</a></li>
+	<li id="menu-item-1144" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1144"><a href="https://hexaware.com/services/digital-assurance/">Digital Assurance</a></li>
+	<li id="menu-item-1143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1143"><a href="https://hexaware.com/services/digital-customer/">Digital Customer</a></li>
+	<li id="menu-item-1148" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1148"><a href="https://hexaware.com/services/enterprise-solutions/">Enterprise Solutions</a></li>
+	<li id="menu-item-1149" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1149"><a href="https://hexaware.com/services/infrastructure-management-services/">Infrastructure Management Services</a></li>
+	<li id="menu-item-11503" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11503"><a href="https://hexaware.com/services/call-center-transformation/">Call Center Transformation</a></li>
+</ul>
+</li>
+<li id="menu-item-1150" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1150"><a href="https://hexaware.com/industries/">Industries</a>
+<ul class="sub-menu">
+	<li id="menu-item-8842" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8842"><a href="https://hexaware.com/industries/banking-and-financial-services/">Banking and Financial Services</a></li>
+	<li id="menu-item-1152" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1152"><a href="https://hexaware.com/industries/travel-and-transportation/">Travel and Transportation</a></li>
+	<li id="menu-item-1153" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1153"><a href="https://hexaware.com/industries/healthcare-and-insurance/">Healthcare and Insurance</a></li>
+	<li id="menu-item-1154" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1154"><a href="https://hexaware.com/industries/manufacturing-and-consumer/">Manufacturing and Consumer</a></li>
+	<li id="menu-item-11837" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11837"><a href="https://hexaware.com/industries/professional-services/">Professional Services</a></li>
+</ul>
+</li>
+<li id="menu-item-1205" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1205"><a href="https://hexaware.com/corporate-overview/">Corporate Overview</a>
+<ul class="sub-menu">
+	<li id="menu-item-8655" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8655"><a href="https://hexaware.com/corporate-overview/about-hexaware/">About Hexaware</a></li>
+	<li id="menu-item-7952" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7952"><a href="https://hexaware.com/corporate-overview/board-of-directors/">Board of Directors</a></li>
+	<li id="menu-item-1232" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1232"><a href="https://hexaware.com/corporate-overview/management-team/">Management Team</a></li>
+	<li id="menu-item-1209" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1209"><a href="https://hexaware.com/corporate-overview/core-values/">Core Values</a></li>
+	<li id="menu-item-1909" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1909"><a href="https://hexaware.com/corporate-overview/milestones/">Milestones</a></li>
+	<li id="menu-item-1210" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1210"><a href="https://hexaware.com/corporate-overview/hexaware-edge/">Hexaware Edge</a></li>
+	<li id="menu-item-1910" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1910"><a href="https://hexaware.com/corporate-overview/quality-policy/">Quality Policy</a></li>
+	<li id="menu-item-1207" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1207"><a href="https://hexaware.com/corporate-overview/alliances/">Alliances</a></li>
+	<li id="menu-item-1208" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1208"><a href="https://hexaware.com/corporate-overview/awards-and-recognition/">Awards and Recognition</a></li>
+	<li id="menu-item-9206" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9206"><a href="https://hexaware.com/corporate-overview/analyst-speak/">Analyst Speak</a></li>
+	<li id="menu-item-11415" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11415"><a href="https://hexaware.com/brand">Brand Resource</a></li>
+	<li id="menu-item-14584" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14584"><a href="https://hexaware.com/corporate-overview/hexavarsity/">HexaVarsity</a></li>
+</ul>
+</li>
+<li id="menu-item-5227" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-5227"><a href="https://hexaware.com/careers/">Careers</a>
+<ul class="sub-menu">
+	<li id="menu-item-5232" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5232"><a href="https://hexaware.com/careers/why-hexaware/">Why Hexaware</a></li>
+	<li id="menu-item-5231" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5231"><a href="https://hexaware.com/careers/our-culture/">Our Culture</a></li>
+	<li id="menu-item-5230" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5230"><a href="https://hexaware.com/careers/infrastructure-facilities/">Infrastructure &#038; Facilities</a></li>
+	<li id="menu-item-5233" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5233"><a href="https://hexaware.com/careers/apply-job/">Apply Job</a></li>
+	<li id="menu-item-5234" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5234"><a href="https://hexaware.com/careers/jobs/">Jobs</a></li>
+	<li id="menu-item-5229" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5229"><a href="https://hexaware.com/careers/faq/">FAQ</a></li>
+	<li id="menu-item-5228" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5228"><a href="https://hexaware.com/careers/beware-of-fake-job-offer/">Beware of Fake Job Offer</a></li>
+</ul>
+</li>
+</ul>		</div>
+			</div>
+
+  
+	<div class="container footer-tab">
+        
+            <div class="col-sm-12 footer-app">
+                
+                <a href="/bottom-up-disruption/" target="_blank" class="app">
+                <img src="../images/BUD-icon.png" class="bud-icon" alt="">
+              </a>
+       
+    <a href="https://hexaware.com/download-app/" target="_blank" class="app">
+                <img src="../images/mobile-icon.png" class="app-icon" alt="">
+                <a href="https://hexaware.com/download-app/">Download App</a>
+              </a>
+<!--
+                 <a href="https://www.linkedin.com/company/hexaware-technologies" target="_blank" class="linkedin">
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.facebook.com/HexawareTechnologies" target="_blank" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="https://twitter.com/hexawareglobal" target="_blank" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+-->
+    </div>
+		<div class="col-sm-6 footer-text">© Hexaware Technologies. All rights reserved 2018</div>
+		<div class="col-sm-6 footerlinks"><a href="https://hexaware.com/sitemap/">Sitemap</a>    |    <a href="https://hexaware.com/disclaimer">Disclaimer</a>     |    <a href="https://hexaware.com/privacy-policy/">Privacy Policy</a>     <!--|    <a href="https://hexaware.com/safe-harbor-privacy-policy/">Safe Harbor Privacy Policy</a>--></div>
+	</div>
+  </div>
+</div>
+
+<script src="../js/jquery.fancybox.pack.js"></script>
+<script src="../js/jquery.maphilight.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/bootstrap-responsive-tabs.min.js"></script>
+<script src="../js/css3-animate-it.js"></script>
+<script src="../js/myscript.js"></script>
+<script src="../js/slick.js"></script>
+<script src="../js/jquery-eu-cookie-law-popup.js"></script>
+<script src="../js/jquery.fancybox.pack.js"></script>
+<script src="../js/easy-responsive-tabs.js"></script>
+<script src="../js/bootstrap-select.js"></script>
+<script src="../js/owl.carousel.min.js"></script>
+<script src="../js/myscript17.js"></script>
+<script src="../js/jquery.gray.min.js"></script>
+<script src="../js/autofill.js" type="text/javascript" async></script>
+<script>
+$('.selectpicker').selectpicker({});
+$('.select-blog').selectpicker({});
+</script>
+<script src="../js/classie.js"></script>
+<script src="../js/snap.svg-min.js"></script>
+<script src="../js/menuanimation.js"></script>
+ <script src="../js/scripts.js"></script>
+ <script src="../js/mobile-shape-animation.js"></script>
+  <script src="../js/detectDevice.js"></script>
+<script>		
+	    if( 'ontouchstart' in window ){
+	    	$(document).ready(function(){
+	    		$('.srv-mnfct').each(function(){
+	    			$(this).removeClass('srv-mnfct');
+	    		});
+	    		$('.srv-trvltrns').each(function(){
+	    			$(this).removeClass('srv-trvltrns');
+	    		});
+	    		$('.cs-ldngdtch').each(function(){
+	    			$(this).removeClass('cs-ldngdtch');
+	    		});
+	    		$('.cs-prdcteng').each(function(){
+	    			$(this).removeClass('cs-prdcteng');
+	    		});
+	    	});
+	    	
+	    }else if(WURFL.form_factor=="Tablet"){
+	    	$(document).ready(function(){
+	    		$('.srv-mnfct').each(function(){
+	    			$(this).removeClass('srv-mnfct');
+	    		});
+	    		$('.srv-trvltrns').each(function(){
+	    			$(this).removeClass('srv-trvltrns');
+	    		});
+	    		$('.cs-ldngdtch').each(function(){
+	    			$(this).removeClass('cs-ldngdtch');
+	    		});
+	    		$('.cs-prdcteng').each(function(){
+	    			$(this).removeClass('cs-prdcteng');
+	    		});
+	    	});
+	    }else{
+	    	$.getScript( "/wp-content/themes/hexaware-main/js/parallex.js" )
+			  .done(function( script, textStatus ) {
+			    //$('.animate-section').parallax({ 'coeff':-.65 });
+				$('.animate-element-left').parallax({ 'coeff':-0.15 });
+				$('.animate-element-right').parallax({ 'coeff':-.25 });
+			  })
+			  .fail(function( jqxhr, settings, exception ) {
+			    $( "div.log" ).text( "Triggered ajaxError handler." );
+			});
+	    	
+	    }
+$(document).ready(function () {
+$('.digitalmaturity-slider').slick({
+  	 dots: true,
+  infinite: true,
+   autoplay: false,
+  autoplaySpeed: 5000,
+  slidesToShow: 1,
+  slidesToScroll: 1
+	});
+	});
+
+		
+	try {
+		$('#myTab').tabCollapse();
+	}catch(err) {
+	}
+	
+$('.slider-for').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  fade: true,
+  asNavFor: '.slider-nav',
+  focusOnSelect: true,
+   adaptiveHeight: true
+
+});
+
+$('.slider-nav').slick({
+  slidesToShow: 11,
+  slidesToScroll: 1,
+  asNavFor: '.slider-for',
+  //dots: true,
+  centerMode: true,
+  focusOnSelect: true,
+   adaptiveHeight: true,
+  
+  responsive: [
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 9,
+        infinite: true,
+      
+      }
+    },  
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 7,
+        infinite: true,
+   
+      }
+    },
+    {
+      breakpoint: 800,
+      settings: {
+        slidesToShow: 5,
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 3,
+      }
+    },
+    {
+      breakpoint: 400,
+      settings: {
+        slidesToShow: 1,
+      }
+    }	  
+	
+]
+  
+});
+
+$('.slider-for-location').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  fade: true,
+  asNavFor: '.slider-nav-location',
+  focusOnSelect: true
+  /* adaptiveHeight: true*/
+
+});
+
+$('.slider-nav-location').slick({
+  slidesToShow: 5,
+  slidesToScroll: 1,
+  asNavFor: '.slider-for-location',
+  //dots: true,
+  centerMode: true,
+  focusOnSelect: true,
+   adaptiveHeight: true,
+  
+  responsive: [
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 4,
+        infinite: true,
+      
+      }
+    },  
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        infinite: true,
+   
+      }
+    },
+    {
+      breakpoint: 800,
+      settings: {
+        slidesToShow: 3,
+      }
+    },
+	{
+      breakpoint: 670,
+      settings: {
+        slidesToShow: 1,
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+      }
+    },
+    {
+      breakpoint: 400,
+      settings: {
+        slidesToShow: 1,
+      }
+    }	  
+	
+]
+  
+});
+
+$(document).ready(function () {
+$('#horizontalTab').easyResponsiveTabs({
+type: 'default', //Types: default, vertical, accordion           
+width: 'auto', //auto or any width like 600px
+fit: true,   // 100% fit in a container
+closed: 'accordion', // Start closed if in accordion view
+activate: function(event) { // Callback function if tab is switched
+var $tab = $(this);
+var $info = $('#tabInfo');
+var $name = $('span', $info);
+$name.text($tab.text());
+$info.show();
+}
+});
+$('#verticalTab').easyResponsiveTabs({
+type: 'vertical',
+width: 'auto',
+fit: true
+});
+$('#verticalTabEurope').easyResponsiveTabs({
+type: 'vertical',
+width: 'auto',
+fit: true
+});
+$('#verticalTabUsa').easyResponsiveTabs({
+type: 'vertical',
+width: 'auto',
+fit: true
+});
+$('#verticalTabAsia').easyResponsiveTabs({
+type: 'vertical',
+width: 'auto',
+fit: true
+});
+$('#verticalTabAustralia').easyResponsiveTabs({
+type: 'vertical',
+width: 'auto',
+fit: true
+});
+$('#verticalTabNorth').easyResponsiveTabs({
+type: 'vertical',
+width: 'auto',
+fit: true
+});
+$('#verticalTabSouth').easyResponsiveTabs({
+type: 'vertical',
+width: 'auto',
+fit: true
+});
+$('#verticalTabRussia').easyResponsiveTabs({
+type: 'vertical',
+width: 'auto',
+fit: true
+});
+});
+$(document).ready(function () {
+  $('.investor-slider-content .investor-tabs li a.stock-link-init').click(function(){
+    //alert(0);
+     //$('.slider-for-stock').resize();
+  });
+    $('.investor-slider-content .accordion-link').click(function(){
+     
+    setTimeout(function(){ 
+     // alert('ok-mobile')
+  // $('.slider-for-stock').resize();
+    //$('.slick-next').trigger('click');
+    setTimeout(function(){
+    var slider = $( '.slider-for-stock' );
+slider[0].slick.slickGoTo(3);
+},1);
+  },100);
+  });
+//  $('.slider-for-stock').slick({
+//  slidesToShow: 1,
+//  slidesToScroll: 1,
+//  arrows: false,
+//  fade: true,
+//  asNavFor: '.slider-nav-stock',
+//  focusOnSelect: true,
+//   adaptiveHeight: true
+//
+//});
+//
+//$('.slider-nav-stock').slick({
+//  slidesToShow: 11,
+//  slidesToScroll: 1,
+//  asNavFor: '.slider-for-stock',
+//  //dots: true,
+//  centerMode: true,
+//  focusOnSelect: true,
+//   adaptiveHeight: true,
+//  
+//  responsive: [
+//    {
+//      breakpoint: 1200,
+//      settings: {
+//        slidesToShow: 1,
+//        infinite: true,
+//      
+//      }
+//    },  
+//    {
+//      breakpoint: 1024,
+//      settings: {
+//        slidesToShow: 1,
+//        infinite: true,
+//   
+//      }
+//    },
+//    {
+//      breakpoint: 800,
+//      settings: {
+//        slidesToShow: 1,
+//      }
+//    },
+//    {
+//      breakpoint: 767,
+//      settings: {
+//        slidesToShow: 1,
+//      }
+//    },
+//    {
+//      breakpoint: 400,
+//      settings: {
+//        slidesToShow: 1,
+//      }
+//    }   
+//  
+//]
+//});  
+
+   /* $('.slider-for-stock').resize();*/
+});
+
+$(document).ready(function () {
+  $('.slider-for-agile').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  fade: false,
+  draggable: false,
+  swipeToSlide: false,
+  swipe: false,
+  asNavFor: '.slider-nav-agile',
+  focusOnSelect: true,
+   autoplay: true,
+  autoplaySpeed: 5000,
+   adaptiveHeight: true
+
+});
+
+$('.slider-nav-agile').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  asNavFor: '.slider-for-agile',
+  //dots: true,
+  centerMode: true,
+  focusOnSelect: true,
+   adaptiveHeight: true,
+  
+  responsive: [
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 3,
+        infinite: true,
+      
+      }
+    },  
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        infinite: true,
+   
+      }
+    },
+    {
+      breakpoint: 800,
+      settings: {
+        slidesToShow: 1,
+      }
+    },
+    {
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 1,
+      }
+    },
+    {
+      breakpoint: 400,
+      settings: {
+        slidesToShow: 1,
+      }
+    }   
+  
+]
+});  
+}); 
+</script>
+
+
+    <script type="text/javascript">
+      jQuery(function() {
+        jQuery( "#leadership-tabs" ).tabs();
+      });
+    </script> 
+<script src="../js/api.js"></script>    
+
+		<!-- google analytics code -->
+		<script>/*<![CDATA[*/(function(w,a,b,d,s){w[a]=w[a]||{};w[a][b]=w[a][b]||{q:[],track:function(r,e,t){this.q.push({r:r,e:e,t:t||+new Date});}};var e=d.createElement(s);var f=d.getElementsByTagName(s)[0];e.async=1;e.src='//marketing.hexaware.com/cdnr/27/acton/bn/tracker/18453';f.parentNode.insertBefore(e,f);})(window,'ActOn','Beacon',document,'script');ActOn.Beacon.track();/*]]>*/</script>
+       
+        <!-- Start of LiveChat (www.livechatinc.com) code -->
+		<script type="text/javascript">
+        window.__lc = window.__lc || {};
+        window.__lc.license = 7340541;
+        (function() {
+          var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+          lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+        })();
+        </script>
+        <!-- End of LiveChat code -->
+		</body>
+</html>
+<!-- Performance optimized by W3 Total Cache. Learn more: https://www.w3-edge.com/products/
+
+ Served from: hexaware.com @ 2018-07-07 22:51:57 by W3 Total Cache -->
