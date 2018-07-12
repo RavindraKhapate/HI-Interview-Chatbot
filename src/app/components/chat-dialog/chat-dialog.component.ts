@@ -14,20 +14,16 @@ import 'rxjs/add/operator/scan';
 export class ChatDialogComponent implements OnInit {
   @ViewChild('divChatWindow', { read: ElementRef }) public divChatWindow;
   started = false;
-  message = new Message('', '', '', null);
+  message = new Message();
 
   messages: Observable<Message[]>;
   formValue: string;
 
   constructor(public chat: ChatService, public speech: SpeechService) { }
 
-  ngOnInit() {
-
-    this.speech.message.subscribe(msg => {
-      this.message.timestamp = new Date();
-      this.message.content = msg.message;
-      this.message.sentBy = 'user';
-      this.message.avatar = '../../assets/images/user.png';
+  ngOnInit() { 
+    this.speech.message.subscribe(msg => { 
+      this.message.content = msg.message; 
       this.chat.converse(this.message);
       this.resetControls();
     });
@@ -55,11 +51,8 @@ export class ChatDialogComponent implements OnInit {
     }
   }
 
-  sendMessage() {
-    this.message.timestamp = new Date();
-    this.message.content = this.formValue;
-    this.message.sentBy = 'user';
-    this.message.avatar = '../../assets/images/user.png';
+  sendMessage() { 
+    this.message.content = this.formValue; 
     this.chat.converse(this.message);
     this.formValue = '';
     this.resetControls();
@@ -67,6 +60,6 @@ export class ChatDialogComponent implements OnInit {
 
   resetControls() {
     this.divChatWindow.nativeElement.scrollTop = this.divChatWindow.nativeElement.scrollHeight - 350;
-    this.message = new Message('', '', '', null);
+    this.message = new Message();
   }
 }
