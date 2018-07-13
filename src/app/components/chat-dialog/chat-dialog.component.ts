@@ -14,7 +14,7 @@ import 'rxjs/add/operator/scan';
 export class ChatDialogComponent implements OnInit {
   @ViewChild('divChatWindow', { read: ElementRef }) public divChatWindow;
   started = false;
-  message = new Message('', '', '', null);
+  message = new Message();
 
   messages: Observable<Message[]>;
   formValue: string;
@@ -22,28 +22,36 @@ export class ChatDialogComponent implements OnInit {
   constructor(public chat: ChatService, public speech: SpeechService) { }
 
   ngOnInit() {
-
-    this.speech.message.subscribe(msg => {
-      this.message.timestamp = new Date();
-      this.message.content = msg.message;
-      this.message.sentBy = 'user';
-      this.message.avatar = '../../assets/images/user.png';
-      this.chat.converse(this.message);
-      this.resetControls();
-    });
-
     this.speech.started.subscribe(started => this.started = started);
 
     // appends to array after each new message is added to feedSource
     this.messages = this.chat.conversation.asObservable()
       .scan((acc, val) => acc.concat(val));
   }
+   
 
   toggleVoiceRecognition() {
-    if (this.started) {
-      this.speech.stop();
-    } else {
-      this.speech.start();
+    if (!this.started) {
+      this.started = true;
+      this.speech.record()
+        .subscribe(
+          //listener
+          (value) => {
+            this.message.content = value;
+            this.chat.converse(this.message);
+            this.resetControls();
+          },
+          //errror
+          (err) => {
+            console.log(err);
+            if (err.error == "no-speech") {
+             //TODO: Show error message
+            }
+          }); 
+    }
+    else { 
+      this.started = false;
+      this.speech.destroySpeechObject();
     }
   }
 
@@ -56,10 +64,7 @@ export class ChatDialogComponent implements OnInit {
   }
 
   sendMessage() {
-    this.message.timestamp = new Date();
     this.message.content = this.formValue;
-    this.message.sentBy = 'user';
-    this.message.avatar = '../../assets/images/user.png';
     this.chat.converse(this.message);
     this.formValue = '';
     this.resetControls();
@@ -67,6 +72,6 @@ export class ChatDialogComponent implements OnInit {
 
   resetControls() {
     this.divChatWindow.nativeElement.scrollTop = this.divChatWindow.nativeElement.scrollHeight - 350;
-    this.message = new Message('', '', '', null);
+    this.message = new Message();
   }
 }

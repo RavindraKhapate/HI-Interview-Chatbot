@@ -22,13 +22,14 @@ export class ChatService {
     return this.client.textRequest(userMessage.content)
       .then(res => {
         const speech = res.result.fulfillment.speech;
-        const botMessage = new Message(speech, 'bot', '../../assets/images/chatbot.png', userMessage.timestamp);
+        const botMessage = new Message('bot');
+        botMessage.content = speech;
         this.update(botMessage);
       });
   }
 
   // Adds message to source
-  update(userMessage: Message) {
-    this.conversation.next([userMessage]);
+  update(message: Message) {
+    this.conversation.next([message]);
   }
 }

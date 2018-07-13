@@ -20,7 +20,7 @@ import { SpeechModule } from './modules/speech.module';
     SpeechModule
   ],
   providers: [
-    { provide: 'SPEECH_LANG', useValue: 'en-US' },
+    { provide: 'SPEECH_LANG', useValue: 'en-IN' },
   ],
   bootstrap: [AppComponent]
 })
