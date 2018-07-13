@@ -25,11 +25,22 @@ export class ChatService {
         const botMessage = new Message('bot');
         botMessage.content = speech;
         this.update(botMessage);
+        this.speak(speech);
       });
   }
 
   // Adds message to source
   update(message: Message) {
     this.conversation.next([message]);
+  }
+
+  speak(text) {
+    var voices = speechSynthesis.getVoices();
+    var botVoice = new SpeechSynthesisUtterance();
+    botVoice.voice = voices[10]; 
+    botVoice.text = text;
+    botVoice.lang = 'en-IN';
+    botVoice.rate = 1.1;
+    speechSynthesis.speak(botVoice);
   }
 }

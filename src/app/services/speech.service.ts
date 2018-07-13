@@ -5,8 +5,7 @@ import * as _ from "lodash";
 import { Observable } from 'rxjs/Rx';
  
 interface IWindow extends Window {
-  webkitSpeechRecognition: any;
-  SpeechRecognition: any;
+  webkitSpeechRecognition: any; 
 }
 
 @Injectable()
