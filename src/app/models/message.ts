@@ -4,10 +4,13 @@ export class Message {
   avatar: string;
   sentBy: string;
 
-  constructor(content: string, sentBy: string, avatar: string, timestamp?: Date) {
-    this.content = content;
+  constructor(sentBy: string = 'user') { 
     this.sentBy = sentBy;
-    this.timestamp = timestamp;
-    this.avatar = avatar;
+    this.timestamp = new Date();
+    if (sentBy == 'user') {
+      this.avatar = '../../assets/images/user.png';
+    } else {
+      this.avatar = '../../assets/images/chatbot.png';
+    }
   }
 }
