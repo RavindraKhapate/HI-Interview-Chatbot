@@ -21,25 +21,37 @@ export class ChatDialogComponent implements OnInit {
 
   constructor(public chat: ChatService, public speech: SpeechService) { }
 
-  ngOnInit() { 
-    this.speech.message.subscribe(msg => { 
-      this.message.content = msg.message; 
-      this.chat.converse(this.message);
-      this.resetControls();
-    });
-
+  ngOnInit() {
     this.speech.started.subscribe(started => this.started = started);
 
     // appends to array after each new message is added to feedSource
     this.messages = this.chat.conversation.asObservable()
       .scan((acc, val) => acc.concat(val));
   }
+   
 
   toggleVoiceRecognition() {
-    if (this.started) {
-      this.speech.stop();
-    } else {
-      this.speech.start();
+    if (!this.started) {
+      this.started = true;
+      this.speech.record()
+        .subscribe(
+          //listener
+          (value) => {
+            this.message.content = value;
+            this.chat.converse(this.message);
+            this.resetControls();
+          },
+          //errror
+          (err) => {
+            console.log(err);
+            if (err.error == "no-speech") {
+             //TODO: Show error message
+            }
+          }); 
+    }
+    else { 
+      this.started = false;
+      this.speech.destroySpeechObject();
     }
   }
 
@@ -51,8 +63,8 @@ export class ChatDialogComponent implements OnInit {
     }
   }
 
-  sendMessage() { 
-    this.message.content = this.formValue; 
+  sendMessage() {
+    this.message.content = this.formValue;
     this.chat.converse(this.message);
     this.formValue = '';
     this.resetControls();
