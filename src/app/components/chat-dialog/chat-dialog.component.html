@@ -3,11 +3,11 @@
   <div id="lc_chat_layout">
     <div id="lc_chat_header" style="background:#ed3e3e">
       <span id="lc_chat_title" style="color:#ffffff;font:bold;font-family:Calibri">Hexaware Interview Bot</span>
-      <span id="lc_minimize" class="lc-minimize" title="Maximize" onclick="minimizeClick()"><i>+</i></span>
+      <span id="lc_minimize" class="lc-minimize" title="Minimize" onclick="minimizeClick()"><i>-</i></span>
     </div>
-    <div id="lc_chat_container" style="display:none">
-      <br />
+    <div id="lc_chat_container"> 
       <div #divChatWindow id="lc_chat_message_window">
+        <br />
         <ng-container *ngFor="let message of messages | async">
           <div class="message" [ngClass]="{ 'from': message.sentBy === 'bot',
                                   'to':   message.sentBy === 'user' }">

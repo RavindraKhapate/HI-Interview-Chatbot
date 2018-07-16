@@ -17,13 +17,13 @@
 
   <script type="text/javascript">
     function minimizeClick() {
-      if ($("#lc_minimize").html() == "-") {
-        $("#lc_minimize").html("+");
-        $("#lc_minimize").attr('title', "Maximize");
-      }
-      else {
+      if ($("#lc_minimize").html() == "+") {
         $("#lc_minimize").html("-");
         $("#lc_minimize").attr('title', "Minimize");
+      }
+      else {
+        $("#lc_minimize").html("+");
+        $("#lc_minimize").attr('title', "Maximize");
       }
       $("#lc_chat_container").slideToggle();
     }; 

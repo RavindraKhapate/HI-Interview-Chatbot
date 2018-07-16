@@ -6,6 +6,7 @@
 export const environment = {
   production: false,
   dialogflow: {
-    accessToken: 'c4aa4d1e6e14468bbb591adb7ce904bd'
+    default: 'c4aa4d1e6e14468bbb591adb7ce904bd',
+    cSharp: 'bd70fd0782454d14a13372bc03f65f4f'
   }
 };
