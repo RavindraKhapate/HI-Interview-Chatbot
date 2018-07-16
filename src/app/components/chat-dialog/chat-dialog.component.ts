@@ -42,9 +42,10 @@ export class ChatDialogComponent implements OnInit {
             this.resetControls();
           },
           //errror
-          (err) => {
-            console.log(err);
+          (err) => { 
             if (err.error == "no-speech") {
+              this.started = false;
+              this.toggleVoiceRecognition(); 
              //TODO: Show error message
             }
           }); 
