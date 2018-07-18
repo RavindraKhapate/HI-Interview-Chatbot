@@ -6,7 +6,9 @@
 export const environment = {
   production: false,
   dialogflow: {
-    default: 'c4aa4d1e6e14468bbb591adb7ce904bd',
-    cSharp: 'bd70fd0782454d14a13372bc03f65f4f'
+    //default: 'c4aa4d1e6e14468bbb591adb7ce904bd',
+    defaultAgent: '181ce65294c14b87a8e1082764922c40',
+    cSharpAgent: '28cedba236b047fc852a5dce2eacbf1a',
+    angularAgent: 'f366a2fd66814aeb8ef0bd2e0b8a5330'
   }
 };

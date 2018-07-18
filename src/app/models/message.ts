@@ -1,7 +1,7 @@
 export class Message {
   content: string;
+  avatar: string; 
   timestamp: Date;
-  avatar: string;
   sentBy: string;
 
   constructor(sentBy: string = 'user') { 
@@ -12,5 +12,5 @@ export class Message {
     } else {
       this.avatar = '../../assets/images/chatbot.png';
     }
-  }
+  } 
 }
