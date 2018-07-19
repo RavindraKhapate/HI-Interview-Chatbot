@@ -74,7 +74,7 @@ export class ChatDialogComponent implements OnInit {
   }
 
   resetControls() {
-    this.divChatWindow.nativeElement.scrollTop = this.divChatWindow.nativeElement.scrollHeight - 250; 
+    this.divChatWindow.nativeElement.scrollTop = this.divChatWindow.nativeElement.scrollHeight - 350; 
     console.log(this.agentName); 
     this.message = new Message(); 
   }
