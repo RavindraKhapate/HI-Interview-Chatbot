@@ -22,6 +22,7 @@ export class ChatService {
       speechSynthesis.cancel();
     }
 
+    this.update(userMessage); 
     if (this.agentName == 'cSharpAgent') {
       this.cSharpAgent.textRequest(userMessage.content)
         .then(res => {
@@ -29,12 +30,10 @@ export class ChatService {
           if (res.result.action == 'BegineerStartAngularInterviewAgent' || res.result.action == 'IntermediateStartAngularInterviewAgent'
             || res.result.action == 'ExpertStartAngularInterviewAgent') {
             this.agentName = 'angularAgent'
-            this.update(userMessage); 
             this.defaultIntent(this.agentName);
           }
           else {
-            this.agentName = 'cSharpAgent';
-            this.update(userMessage);
+            this.agentName = 'cSharpAgent'; 
             this.updateConversation(speech);
           }
         });
@@ -42,23 +41,21 @@ export class ChatService {
     else if (this.agentName == 'angularAgent') {
       this.angularAgent.textRequest(userMessage.content)
         .then(res => {
-          const speech = res.result.fulfillment.speech;
-          this.update(userMessage);
+          const speech = res.result.fulfillment.speech; 
           this.updateConversation(speech);
         });
     }
-    else { 
+    else {
+      console.log('Executing Default Agent');
       this.defaultAgent.textRequest(userMessage.content)
         .then(res => {
-          const speech = res.result.fulfillment.speech;
+          const speech = res.result.fulfillment.speech; 
           if (res.result.action == 'StartCsharpInterviewAgent') {
-            this.agentName = 'cSharpAgent';
-            this.update(userMessage); 
+            this.agentName = 'cSharpAgent'; 
             this.defaultIntent(this.agentName);
           }
           else {
-            this.agentName = 'defaultAgent';
-            this.update(userMessage); 
+            this.agentName = 'defaultAgent'; 
             this.updateConversation(speech);
           }
         });

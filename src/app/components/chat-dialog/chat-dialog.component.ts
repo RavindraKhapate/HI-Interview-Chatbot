@@ -35,6 +35,7 @@ export class ChatDialogComponent implements OnInit {
   toggleVoiceRecognition() {
     if (!this.started) {
       this.started = true;
+      console.log("Voice recognition started");
       this.speech.record()
         .subscribe(
           //listener
@@ -42,12 +43,14 @@ export class ChatDialogComponent implements OnInit {
             this.message.content = value;
             this.agentName = this.chat.converse(this.message);  
             this.resetControls();
+            console.log('Executing Voice recognition');
           },
           //errror
           (err) => {
             if (err.error == "no-speech") {
               this.started = false;
               this.toggleVoiceRecognition();
+              console.log("Error in voice recognition");
               //TODO: Show error message
             }
           });
@@ -55,6 +58,7 @@ export class ChatDialogComponent implements OnInit {
     else {
       this.started = false;
       this.speech.destroySpeechObject();
+      console.log("Speech object destroyed");
     }
   }
 
