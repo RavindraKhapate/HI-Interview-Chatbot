@@ -22,7 +22,7 @@
     <div class="textarea-container">
       <textarea [(ngModel)]="formValue" (keyup.enter)="sendMessage()"></textarea>
       <input type="hidden" [(ngModel)]="agentName" />
-      <button [ngClass]="getMicStyle()" (click)="toggleVoiceRecognition()" style="outline:none !important"></button>
+      <button [ngClass]="getMicStyle()" (click)="toggleVoiceRecognition()" style="outline:none !important" aria-hidden="true"></button>
     </div>
   </div>
 </div>

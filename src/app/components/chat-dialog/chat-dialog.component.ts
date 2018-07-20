@@ -64,7 +64,7 @@ export class ChatDialogComponent implements OnInit {
 
   getMicStyle() {
     if (this.started) {
-      return 'fa fa-microphone-slash fa-2x';
+      return 'fas fa-microphone-alt fa-2x';
     } else {
       return 'fa fa-microphone fa-2x';
     }

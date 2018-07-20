@@ -97,11 +97,12 @@ html {
 #lc_chat_layout #lc_chat_container {
   max-height: 350px;
   clear: both;
-  background-color: #f3f3f3;
+  /*background-color: #f3f3f3;*/
   border: 1px solid rgba(0,0,0,0.2);
   border-top: none;
   border-bottom: none;
   text-align: left;
+  background-color: hsla(0,0%,100%,.9) !important;
 }
 
   #lc_chat_layout #lc_chat_container #lc_chat_message_window {
@@ -115,6 +116,7 @@ html {
 
 .textarea-container {
   position: relative;
+  background-color: #fff;
 }
 
   .textarea-container textarea {
@@ -137,6 +139,24 @@ html {
     top: 0;
     right: 0;
     width: 0 !important;
-    color: black !important;
+    color: #7373cd;
     margin-top: 20px;
   }
+   
+.fa-microphone:before {
+  content: "\f130";
+}
+
+.fa-microphone-alt:before {
+  content: "\f3c9"; 
+  -webkit-animation: glowing 1500ms infinite;
+}
+@-webkit-keyframes glowing {
+   
+  50% {
+    color: #d59393;
+  }
+  100% {  
+    color: #da3b3b;    
+  }
+} 
