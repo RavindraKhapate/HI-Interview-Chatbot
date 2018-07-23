@@ -23,10 +23,10 @@ html {
 }
 
   .message.to {
-    background-color: #2095FE !important;
+    background-color: #9bc8f1 !important;
     color: #000000 !important;
     margin-left: 30% !important;
-    text-align: right !important; 
+    text-align: right !important;
   }
 
     .message.to img {
@@ -34,13 +34,14 @@ html {
     }
 
   .message.from {
-    background-color: #E5E4E9 !important;
-    color: #363636 !important;
+    background-color: #ecbc4f !important;
+    color: #0f0f0f !important;
     margin-right: 40px !important;
     display: block !important;
     line-height: normal !important;
     margin-top: 3px !important;
-    width:75% !important;
+    width: 75% !important;
+    overflow: auto !important;
   }
 
     .message.to + .message.to,
@@ -48,13 +49,44 @@ html {
       margin-top: -10px !important;
     }
 
+    .message.from .chips {
+      margin-left: -10px !important;
+    }
+
+.suggestion {
+  margin-top: 10px !important;
+  float: left !important;
+  margin-left: 10px !important;
+  padding: 10px !important;
+  border: 1.5px solid rgba(0,0,0,0.2) !important;
+  border-radius: 50px !important;
+  cursor: pointer !important;
+  min-width: 50px !important;
+  text-align: center !important;
+  font-weight: bolder !important;
+  font-family: cursive;
+  background-color: #3d793d !important;
+  color: #f5f5f5 !important;
+  border-color: black !important;
+}
+
+  .suggestion:active {
+    color: rgba(0,0,0,1) !important;
+  }
+
+  .suggestion:hover {
+    color: #000000 !important;
+    border: 1.5px solid #000000 !important;
+  }
+   
+
 #lc_chat_layout {
   font-family: Calibri;
   font-weight: bold;
   display: block;
   right: 250px;
   left: 220px;
-  top: -450px; 
+  top: -500px;
   /*width: 350px;*/
   text-align: left !important;
   bottom: 0;
@@ -142,21 +174,23 @@ html {
     color: #7373cd;
     margin-top: 20px;
   }
-   
+
 .fa-microphone:before {
   content: "\f130";
 }
 
 .fa-microphone-alt:before {
-  content: "\f3c9"; 
+  content: "\f3c9";
   -webkit-animation: glowing 1500ms infinite;
 }
+
 @-webkit-keyframes glowing {
-   
+
   50% {
     color: #d59393;
   }
-  100% {  
-    color: #da3b3b;    
+
+  100% {
+    color: #da3b3b;
   }
-} 
+}

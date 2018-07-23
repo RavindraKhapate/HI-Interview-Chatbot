@@ -7,20 +7,36 @@
     <div #divChatWindow id="lc_chat_message_window">
       <br />
       <ng-container *ngFor="let message of messages | async">
-        <div class="message" [ngClass]="{ 'from': message.sentBy === 'bot',
-                                  'to':   message.sentBy === 'user' }">
-          <img [src]="message.avatar" class="avatar" />
-          {{ message.content }}
-          <br />
-          <span class="timestamp">
+        <div *ngIf="message.response.result.resolvedQuery !== ''" class="bubble bot">
+          <div class="message to">
+            <img src="../../assets/images/user.png" class="avatar" />
+            {{ message.response.result.resolvedQuery }}
+            <br />
+            <span class="timestamp">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              {{message.timestamp | date : 'h:mm:ss a' }}
+            </span>
+          </div>
+        </div>
+        <div class="message from">
+          <img src="../../assets/images/chatbot.png" class="avatar" />
+          {{ message.response.result.fulfillment.speech }}
+          <div *ngFor="let r of message.response.result.fulfillment.messages">
+            <div *ngIf="r.type === 'suggestion_chips'" class="chips">
+              <div class="suggestion" *ngFor="let s of r.suggestions" (click)="autoSendMessage(s.title)">
+                {{s.title}}
+              </div>
+            </div>
+          </div>
+          <div class="timestamp">
             <i class="fa fa-clock-o" aria-hidden="true"></i>
             {{message.timestamp | date : 'h:mm:ss a' }}
-          </span>
+          </div>
         </div>
       </ng-container>
     </div>
     <div class="textarea-container">
-      <textarea [(ngModel)]="formValue" (keyup.enter)="sendMessage()"></textarea>
+      <textarea [(ngModel)]="query" (keyup.enter)="sendMessage()"></textarea>
       <input type="hidden" [(ngModel)]="agentName" />
       <button [ngClass]="getMicStyle()" (click)="toggleVoiceRecognition()" style="outline:none !important" aria-hidden="true"></button>
     </div>

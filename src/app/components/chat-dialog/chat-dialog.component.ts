@@ -18,15 +18,13 @@ export class ChatDialogComponent implements OnInit {
   message = new Message();
   agentName: string;
   messages: Observable<Message[]>;
-  formValue: string;
+  query: string;
 
   constructor(public chat: ChatService, public speech: SpeechService) { }
 
   ngOnInit() {
-    this.speech.started.subscribe(started => this.started = started);
-   // this.agentName = 'defaultAgent';
-    this.chat.defaultIntent('defaultAgent');
-    // appends to array after each new message is added to feedSource
+    this.speech.started.subscribe(started => this.started = started); 
+    this.chat.defaultIntent(); 
     this.messages = this.chat.conversation.asObservable()
       .scan((acc, val) => acc.concat(val));
   }
@@ -34,31 +32,27 @@ export class ChatDialogComponent implements OnInit {
 
   toggleVoiceRecognition() {
     if (!this.started) {
-      this.started = true;
-      console.log("Voice recognition started");
+      this.started = true; 
       this.speech.record()
         .subscribe(
           //listener
           (value) => {
-            this.message.content = value;
-            this.agentName = this.chat.converse(this.message);  
-            this.resetControls();
-            console.log('Executing Voice recognition');
+            this.message.query = value;
+            this.chat.converse(this.message);
+            this.resetControls(); 
           },
           //errror
           (err) => {
             if (err.error == "no-speech") {
               this.started = false;
-              this.toggleVoiceRecognition();
-              console.log("Error in voice recognition");
+              this.toggleVoiceRecognition(); 
               //TODO: Show error message
             }
           });
     }
     else {
       this.started = false;
-      this.speech.destroySpeechObject();
-      console.log("Speech object destroyed");
+      this.speech.destroySpeechObject(); 
     }
   }
 
@@ -71,15 +65,19 @@ export class ChatDialogComponent implements OnInit {
   }
 
   sendMessage() {
-    this.message.content = this.formValue;
-    this.agentName = this.chat.converse(this.message);
-    this.formValue = ''; 
+    this.message.query = this.query;
+    this.chat.converse(this.message);
+    this.query = '';
     this.resetControls();
   }
 
+  autoSendMessage(query: string) {
+    this.query = query;
+    this.sendMessage();
+  }
+
   resetControls() {
-    this.divChatWindow.nativeElement.scrollTop = this.divChatWindow.nativeElement.scrollHeight - 350; 
-    console.log(this.agentName); 
-    this.message = new Message(); 
+    this.divChatWindow.nativeElement.scrollTop = this.divChatWindow.nativeElement.scrollHeight - 300; 
+    this.message = new Message();
   }
 }
