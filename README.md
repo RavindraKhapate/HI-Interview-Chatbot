@@ -24,7 +24,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ## Application Screenshot
 
-![Alt text](/src/assets/images/Application-Screenshot1.png?raw=true "Optional Title")
+![Alt text](/src/assets/images/Application-Screenshot.png?raw=true "Optional Title")
 
 ## Further help
 
