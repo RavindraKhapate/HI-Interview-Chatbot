@@ -2,45 +2,54 @@ import { Inject, Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
 import { Message } from '../models/message';
 import { ApiAiClient } from 'api-ai-javascript';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject'; 
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 @Injectable()
 export class ChatService {
 
-  readonly token = environment.dialogflow.accessToken;
-  readonly client = new ApiAiClient({ accessToken: this.token });
-
+  agent = new ApiAiClient({ accessToken: environment.dialogflow.defaultAgent });
   conversation = new BehaviorSubject<Message[]>([]);
 
   constructor(@Inject('SPEECH_LANG') public lang: string) { }
 
   // Sends and receives messages via DialogFlow
   converse(userMessage: Message) {
-
-    this.update(userMessage);
-
-    return this.client.textRequest(userMessage.content)
-      .then(res => {
-        const speech = res.result.fulfillment.speech;
-        const botMessage = new Message('bot');
-        botMessage.content = speech;
-        this.update(botMessage);
-        this.speak(speech);
+    this.cancelSpeechSynthesis();
+    this.agent.textRequest(userMessage.query)
+      .then(response => {
+        this.updateConversation(response);
       });
   }
 
-  // Adds message to source
-  update(message: Message) {
-    this.conversation.next([message]);
+  defaultIntent() {
+    this.cancelSpeechSynthesis();
+    this.agent.eventRequest('Welcome').then(response => {
+      response.result.resolvedQuery = '';
+      this.updateConversation(response);
+    });
   }
 
-  speak(text) { 
+  updateConversation(response: any) {
+    const message = new Message();
+    message.timestamp = new Date();
+    message.response = response;
+    this.conversation.next([message]);
+    this.speak(response.result.fulfillment.speech);
+  }
+
+  cancelSpeechSynthesis() {
+    if (speechSynthesis.speaking) {
+      speechSynthesis.cancel();
+    }
+  }
+
+  speak(text) {
     var voices = speechSynthesis.getVoices();
-    var botVoice = new SpeechSynthesisUtterance(); 
+    var botVoice = new SpeechSynthesisUtterance();
     botVoice.voice = voices[1]; //Google UK English Female
     botVoice.text = text;
     botVoice.lang = this.lang;
-    botVoice.rate = 1.2; //Speech rate
+    botVoice.rate = 1.2; //Speech rate 
     speechSynthesis.speak(botVoice);
   }
 }
