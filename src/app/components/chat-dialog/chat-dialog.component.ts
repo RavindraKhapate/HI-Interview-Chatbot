@@ -4,6 +4,7 @@ import { ChatService } from '../../services/chat.service';
 import { SpeechService } from '../../services/speech.service';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/scan';
+import { concat } from 'rxjs/operator/concat';
 
 @Component({
   selector: 'chat-dialog',
@@ -15,64 +16,68 @@ export class ChatDialogComponent implements OnInit {
   @ViewChild('divChatWindow', { read: ElementRef }) public divChatWindow;
   started = false;
   message = new Message();
-
+  agentName: string;
   messages: Observable<Message[]>;
-  formValue: string;
+  query: string;
 
   constructor(public chat: ChatService, public speech: SpeechService) { }
 
   ngOnInit() {
-    this.speech.started.subscribe(started => this.started = started);
-
-    // appends to array after each new message is added to feedSource
+    this.speech.started.subscribe(started => this.started = started); 
+    this.chat.defaultIntent(); 
     this.messages = this.chat.conversation.asObservable()
       .scan((acc, val) => acc.concat(val));
   }
-   
+
 
   toggleVoiceRecognition() {
     if (!this.started) {
-      this.started = true;
+      this.started = true; 
       this.speech.record()
         .subscribe(
           //listener
           (value) => {
-            this.message.content = value;
+            this.message.query = value;
             this.chat.converse(this.message);
-            this.resetControls();
+            this.resetControls(); 
           },
           //errror
-          (err) => { 
+          (err) => {
             if (err.error == "no-speech") {
               this.started = false;
               this.toggleVoiceRecognition(); 
-             //TODO: Show error message
+              //TODO: Show error message
             }
-          }); 
+          });
     }
-    else { 
+    else {
       this.started = false;
-      this.speech.destroySpeechObject();
+      this.speech.destroySpeechObject(); 
     }
   }
 
   getMicStyle() {
     if (this.started) {
-      return 'fa fa-microphone-slash fa-2x';
+      return 'fas fa-microphone-alt fa-2x';
     } else {
       return 'fa fa-microphone fa-2x';
     }
   }
 
   sendMessage() {
-    this.message.content = this.formValue;
+    this.message.query = this.query;
     this.chat.converse(this.message);
-    this.formValue = '';
+    this.query = '';
     this.resetControls();
   }
 
+  autoSendMessage(query: string) {
+    this.query = query;
+    this.sendMessage();
+  }
+
   resetControls() {
-    this.divChatWindow.nativeElement.scrollTop = this.divChatWindow.nativeElement.scrollHeight - 350;
+    this.divChatWindow.nativeElement.scrollTop = this.divChatWindow.nativeElement.scrollHeight - 300; 
     this.message = new Message();
   }
 }
