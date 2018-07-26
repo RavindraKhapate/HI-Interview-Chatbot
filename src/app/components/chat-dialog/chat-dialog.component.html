@@ -1,6 +1,6 @@
 
 <div id="lc_chat_layout">
-  <div id="lc_chat_header" style="background:#ed3e3e">
+  <div id="lc_chat_header">
     <span id="lc_chat_title" style="color:#ffffff;font:bold;font-family:Calibri">Live Chat Conversation</span>
   </div>
   <div id="lc_chat_container">
@@ -35,10 +35,9 @@
         </div>
       </ng-container>
     </div>
-    <div class="textarea-container">
-      <textarea [(ngModel)]="query" (keyup.enter)="sendMessage()"></textarea>
-      <input type="hidden" [(ngModel)]="agentName" />
-      <button [ngClass]="getMicStyle()" (click)="toggleVoiceRecognition()" style="outline:none !important" aria-hidden="true"></button>
-    </div>
+  </div>
+  <div class="textarea-container"> 
+    <textarea [(ngModel)]="query" (keyup.enter)="sendMessage()"></textarea>
+    <button [ngClass]="getMicStyle()" (click)="toggleVoiceRecognition()" aria-hidden="true"></button>
   </div>
 </div>

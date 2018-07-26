@@ -15,8 +15,7 @@ import { concat } from 'rxjs/operator/concat';
 export class ChatDialogComponent implements OnInit {
   @ViewChild('divChatWindow', { read: ElementRef }) public divChatWindow;
   started = false;
-  message = new Message();
-  agentName: string;
+  message = new Message(); 
   messages: Observable<Message[]>;
   query: string;
 

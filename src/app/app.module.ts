@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { ChatModule } from './modules/chat.module';
+import { HelpSectionModule } from './modules/help-section.module';
 import { SpeechModule } from './modules/speech.module';
 
 
@@ -17,6 +18,7 @@ import { SpeechModule } from './modules/speech.module';
     BrowserModule,
     AppRoutingModule,
     ChatModule,
+    HelpSectionModule,
     SpeechModule
   ],
   providers: [
