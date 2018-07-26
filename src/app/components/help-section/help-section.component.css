@@ -1,0 +1,36 @@
+ 
+
+html {
+  height: 100%;
+}
+#lc_chat_layout {
+  display: block;
+  text-align: left !important;
+  box-sizing: border-box;
+  word-break: break-word;
+  word-wrap: break-word;
+  overflow: hidden !important;
+  border-radius: 10px;
+  border: outset #000000 !important;
+}
+
+
+  #lc_chat_layout #lc_chat_header {
+    display: block;
+    width: 100%; 
+    padding: 10px;
+    cursor: pointer;
+    background: #ed3e3e;
+    border: #ed3e3e !important;
+  }
+
+
+  #lc_chat_layout #lc_chat_container {
+    max-height: 375px;
+    text-align: left;
+    background-color: hsla(0,0%,100%,.9) !important;
+  }
+
+    #lc_chat_layout #lc_chat_container #lc_chat_message_window { 
+      padding-bottom: 250px;  
+    }
