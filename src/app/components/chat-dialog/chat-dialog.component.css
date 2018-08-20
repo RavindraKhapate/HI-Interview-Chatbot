@@ -11,6 +11,8 @@ html {
   overflow: hidden !important;
   border-radius: 10px;
   /*border: outset #000000 !important;*/
+  /*width: 95%;
+  margin-left: 45px;*/
   width: 75%;
   margin: 0 auto;
   border-bottom: outset #000000 !important;
@@ -22,11 +24,19 @@ html {
     height: 43px;
     padding: 10px;
     cursor: pointer;
+    color: white;
     background: #ed3e3e;
     border-top: outset #ed3e3e !important;
     border-left: outset #ed3e3e !important;
     border-right: outset #ed3e3e !important;
   }
+
+
+    #lc_chat_layout #lc_chat_header #lc_chat_title {
+      color: #ffffff;
+      font: bold;
+      font-family: Calibri;
+    }
 
   #lc_chat_layout #lc_chat_container {
     min-height: 325px;
@@ -64,9 +74,9 @@ html {
     min-height: 70px;
     background-color: white;
     margin-bottom: -5px;
-    border-top: outset #000000 !important;
+    /*border-top: outset #000000 !important;
     border-left: outset #000000 !important;
-    border-right: outset #000000 !important;
+    border-right: outset #000000 !important;*/
   }
 
 
