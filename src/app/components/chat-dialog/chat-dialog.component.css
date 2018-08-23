@@ -10,11 +10,11 @@ html {
   word-wrap: break-word;
   overflow: hidden !important;
   border-radius: 10px;
-  /*border: outset #000000 !important;*/
-  /*width: 95%;
-  margin-left: 45px;*/
-  width: 75%;
-  margin: 0 auto;
+  border: outset #000000 !important;
+  width: 95%;
+  margin-left: 45px;
+ /* width: 75%;
+  margin: 0 auto;*/
   border-bottom: outset #000000 !important;
 }
 
