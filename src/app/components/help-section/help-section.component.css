@@ -10,20 +10,23 @@ html {
   word-break: break-word;
   word-wrap: break-word;
   overflow: hidden !important;
-  border-radius: 10px;
-  border: outset #000000 !important;
+  border-radius: 10px; 
 }
 
 
   #lc_chat_layout #lc_chat_header {
     display: block;
-    width: 100%; 
+    width: 100%;
     padding: 10px;
     cursor: pointer;
-    background: #ed3e3e;
-    border: #ed3e3e !important;
+    background: #9E9E9E;
+    border: #9E9E9E !important;
   }
-
+    #lc_chat_layout #lc_chat_header #lc_chat_title {
+      color: #000000;
+      font: bold;
+      font-family: Calibri;
+    }
 
   #lc_chat_layout #lc_chat_container {
     max-height: 375px;
@@ -34,3 +37,10 @@ html {
     #lc_chat_layout #lc_chat_container #lc_chat_message_window { 
       padding-bottom: 250px;  
     }
+
+.topImage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
